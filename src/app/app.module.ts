@@ -1,16 +1,40 @@
 import { NgModule } from '@angular/core';
+import { Route, RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './components/home/home.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+
+
+const routeConfig: Route[]= [
+  {path:'', component:HomeComponent},
+  {path:'home',component:HomeComponent},
+  {path:'contact',component:ContactComponent},
+  {path:'**',component:NotfoundComponent}
+]
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    ContactComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(routeConfig),
+    BrowserAnimationsModule,
+    MatCardModule,
+    FlexLayoutModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

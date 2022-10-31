@@ -1,0 +1,25 @@
+.content {
+    padding: 16px;
+  }
+  
+  .card .read-more:hover {
+    font-size: 14px;
+  }
+  
+  .card:hover {
+    box-shadow: 8px 8px 8px darkgrey;
+    transform: scale(1.1);
+  }
+  
+  .card {
+    /* height:100px;
+        width:100px; */
+    border: 1px solid black;
+    transition: 0.3s;
+    margin: 3rem;
+  }
+  
+  /* .content > mat-card{
+      width: 200px;
+  } */
+  

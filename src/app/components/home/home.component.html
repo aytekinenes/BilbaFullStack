@@ -1,22 +1,146 @@
-
+<!-- 
 <div class="content">
     <div fxLayout="row wrap" fxLayoutGap="20px grid">
       <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let product of products">
-        <mat-card class="mat-elevation-z4">
+        <mat-card class="mat-elevation-z4" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;" >
           <mat-card-header>
             <mat-card-title>{{product.name}}</mat-card-title>
           </mat-card-header>
-          <img
+          <img style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"
             mat-card-image
             src="{{product.imageUrl}}"
           />
           <mat-card-content>
             <p>{{product.spec}}</p>
           </mat-card-content>
-          <mat-card-actions>
-            <div><span style="font-size:20px; color: darkblue;">{{product.price}} TL</span></div>
+          <mat-card-actions >
+            <div class="bottomleft"><span style="font-size:20px; color: darkblue;">{{product.price}} TL</span></div>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="box" style="position: absolute; width: 100%; text-align: center;">
+    <h1>HP Notebook</h1>
+  </div>
+
+  <div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="20px grid">
+      <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let hpPc of hpPc">
+        <mat-card class="mat-elevation-z4" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;" >
+          <mat-card-header>
+            <mat-card-title>{{hpPc.name}}</mat-card-title>
+          </mat-card-header>
+          <img style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"
+            mat-card-image
+            src="{{hpPc.imageUrl}}"
+          />
+          <mat-card-content>
+            <p>{{hpPc.spec}}</p>
+          </mat-card-content>
+          <mat-card-actions >
+            <div class="bottomleft"><span style="font-size:20px; color: darkblue;">{{hpPc.price}} TL</span></div>
           </mat-card-actions>
         </mat-card>
       </div>
     </div>
   </div>
+
+
+
+  <div  class="box" style="position: absolute; width: 100%; text-align: center;">
+    <h1>Lenovo Notebook</h1>
+  </div>
+
+  
+  <div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="20px grid">
+      <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let LenovoPc of LenovoPc">
+        <mat-card class="mat-elevation-z4" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;" >
+          <mat-card-header>
+            <mat-card-title>{{LenovoPc.name}}</mat-card-title>
+          </mat-card-header>
+          <img style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"
+            mat-card-image
+            src="{{LenovoPc.imageUrl}}"
+          />
+          <mat-card-content>
+            <p>{{LenovoPc.spec}}</p>
+          </mat-card-content>
+          <mat-card-actions >
+            <div class="bottomleft"><span style="font-size:20px; color: darkblue;">{{LenovoPc.price}} TL</span></div>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+
+  <div class="box" style="position: absolute; width: 100%; text-align: center;">
+    <h1>Dell Notebook</h1>
+  </div>
+
+  <div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="20px grid">
+      <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let dellPc of dellPc">
+        <mat-card class="mat-elevation-z4" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;" >
+          <mat-card-header>
+            <mat-card-title>{{dellPc.name}}</mat-card-title>
+          </mat-card-header>
+          <img style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"
+            mat-card-image
+            src="{{dellPc.imageUrl}}"
+          />
+          <mat-card-content>
+            <p>{{dellPc.spec}}</p>
+          </mat-card-content>
+          <mat-card-actions >
+            <div class="bottomleft"><span style="font-size:20px; color: darkblue;">{{dellPc.price}} TL</span></div>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+
+
+
+<!--  Güncel Kart Aşağıdadır. -->
+
+<!-- 
+
+<div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="20px grid">
+    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let product of products">
+      <div class="card" style="width: 18rem;">
+        <img src="{{ product.imageUrl }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- 
+
+<div class="container">
+  <div class="card" *ngFor="let product of products">
+    <div class="img-container">
+      <img src="{{ product.imageUrl }}" alt=""/>
+    </div>
+    <div class="card-details">
+      <h2>{{ product.name }}</h2>
+      <p>{{ product.spec }}</p>
+    </div>
+  </div>
+  </div> -->
+
+
+
+
+
+
+
+

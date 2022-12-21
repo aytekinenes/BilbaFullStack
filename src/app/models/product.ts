@@ -1,6 +1,6 @@
 export class ProductModel{
-    name:string;
-    price: number;
+    productName:string;
+    productPrice: number;
     imageUrl: string;
-    spec:string;
+    productSpec:string;
 }

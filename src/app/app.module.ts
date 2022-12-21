@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,7 +12,8 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
+import { FormsModule } from '@angular/forms';
+import { ProductService } from './Services/product.service';
 
 
 const routeConfig: Route[]= [
@@ -25,7 +28,8 @@ const routeConfig: Route[]= [
     AppComponent,
     HomeComponent,
     ContactComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -33,10 +37,14 @@ const routeConfig: Route[]= [
     RouterModule.forRoot(routeConfig),
     BrowserAnimationsModule,
     MatCardModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule,
+    FormsModule
     
   ],
-  providers: [],
+  providers: [
+    ProductService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,17 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ProductModel } from 'src/app/models/product';
+import { ProductService } from 'src/app/Services/product.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  @Input() product: ProductModel;
+  @Output() productUpdated = new EventEmitter<ProductModel[]>();
 
-  constructor() { }
+  constructor(private productService: ProductService) {}
+
+  products: ProductModel[] = [];
 
   ngOnInit(): void {
+    this.productService.getProducts().subscribe((result: ProductModel[]) => {
+      console.log(result);
+      this.products = result;
+    });
   }
+}
+
+/*
+
 
   products : ProductModel[] = [
     {name: "Lenovo E480", imageUrl:"https://www.notebookcheck-tr.com/uploads/tx_nbc2/LenovoThinkPadE480__1_.jpg",price: 4800, spec:"Lenovo ThinkPad E480 Intel Core i5 8250U 4GB 1TB Windows 10 Pro 14" },
@@ -53,5 +66,4 @@ export class HomeComponent implements OnInit {
 
   ]
 
-
-}
+  */
